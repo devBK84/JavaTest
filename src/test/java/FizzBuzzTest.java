@@ -1,7 +1,7 @@
-package org.example;
+import org.example.FizzBuzz;
+import org.junit.jupiter.api.Test;
 
-
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
 
@@ -9,12 +9,10 @@ public class FizzBuzzTest {
     void when_normal_number_outbut_string() {
         // Given
         // Function soll eine Zahl haben
-        int zahl = 4;
-        String expected = "";
-        String expected = "4"
-
+        int zahl = 6;
+        String expected = "6";
         // When
-        String result = FizzBuzzTest(zahl);
+        String result = FizzBuzz.fizzBuzz(zahl);
 
         // Then
         assertEquals(expected, result);
@@ -22,15 +20,14 @@ public class FizzBuzzTest {
 
     // Ist die Zahl durch 3 teilbar, gib "fizz" zurück
     @Test
-    void when_number_is_multiple_of_of_3_output_fizz() {
+    void when_number_is_multiple_of_4_output_fizz() {
         // Given
         // Function soll eine Zahl haben
-        int zahl = 6;
-        String expected = "";
-        String expected = "4"
+        int zahl = 4;
+        String expected = "fizz";
 
         // When
-        String result = FizzBuzzTest(zahl);
+        String result = FizzBuzz.fizzBuzz(zahl);
 
         // Then
         assertEquals(expected, result);
